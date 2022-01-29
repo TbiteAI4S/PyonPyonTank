@@ -191,7 +191,7 @@ MonoBehaviour:
   objectHP: 1
   effectPrefab2: {fileID: 100006, guid: 44dd4fdbb6f10429a844c51183a4c84e, type: 3}
   itemPrefabs:
-  - {fileID: 3210887645776217460, guid: 25fcd6d13c9bcf145a16666523813e9f, type: 3}
+  - {fileID: 7768547957317715861, guid: 72268f15d134bf64a9edfbed990f2ed3, type: 3}
   - {fileID: 8364397930304428749, guid: 514c9588e4b777249887d182c7b5ac0b, type: 3}
   scoreValue: 0
 --- !u!65 &-1001738926843383787

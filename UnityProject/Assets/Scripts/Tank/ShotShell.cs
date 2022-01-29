@@ -44,7 +44,7 @@ public class ShotShell : MonoBehaviour
 
 
             //残段を減らす
-            shotCount = shotCount + 1;
+            shotCount = shotCount - 1;
             shellLabel.text = "砲弾 :" + shotCount;
 
             //タイマーリセット

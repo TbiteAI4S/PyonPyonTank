@@ -24,7 +24,7 @@ public class TankHealth : MonoBehaviour
         if (other.gameObject.tag == "EnemyShell")
         {
             // HPを減らす
-            tankHP -= 1;
+            tankHP = tankHP - 1;
             HPLabel.text = "HP :" + tankHP;
 
             // 砲弾破壊
@@ -57,10 +57,10 @@ public class TankHealth : MonoBehaviour
     //HPの回復
     public void AddHP(int amount)
     {
-        tankHP += amount;
+        tankHP = tankHP + amount;
 
         //HPの最大値
-        if (tankHP > 10)
+        if (tankHP > 15)
         {
             tankHP = 10;
         }
