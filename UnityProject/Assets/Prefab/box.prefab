@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 2244758376910187584}
   - component: {fileID: -1001738926843383787}
   m_Layer: 0
-  m_Name: box
+  m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
   effectPrefab2: {fileID: 100006, guid: 44dd4fdbb6f10429a844c51183a4c84e, type: 3}
   itemPrefabs:
   - {fileID: 3210887645776217460, guid: 25fcd6d13c9bcf145a16666523813e9f, type: 3}
-  - {fileID: 6906037787671660110, guid: b8cb58de2d1485b48aa4c2c299af64ca, type: 3}
+  - {fileID: 8364397930304428749, guid: 514c9588e4b777249887d182c7b5ac0b, type: 3}
   scoreValue: 0
 --- !u!65 &-1001738926843383787
 BoxCollider:
