@@ -15,6 +15,8 @@ public class DestroyObject : MonoBehaviour
     //スコア加算
     public int scoreValue;
     private ScoreManager sm;
+    //吹っ飛びのオブジェクトを取得
+
 
     void Start()
     {
