@@ -15,13 +15,16 @@ public class DestroyObject : MonoBehaviour
     //スコア加算
     public int scoreValue;
     private ScoreManager sm;
-    //吹っ飛びのオブジェクトを取得
+    //吹っ飛びのスクリプトを取得
+    Explosion explosionScript;
 
 
     void Start()
     {
         //ScoreManagerのスクリプトを取得
         sm = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        //Exprotionのスクリプトを取得
+        explosionScript = gameObject.GetComponent<Explosion>();
     }
 
     //ぶつかった瞬間に呼び出し
@@ -50,6 +53,9 @@ public class DestroyObject : MonoBehaviour
                 GameObject effect2 = Instantiate(effectPrefab2, transform.position, Quaternion.identity);
 
                 Destroy(effect2, 2.0f);
+
+                //周りを吹き飛ばす
+                explosionScript.Explode();
 
                 //オブジェクトを破壊する
                 Destroy(this.gameObject);
