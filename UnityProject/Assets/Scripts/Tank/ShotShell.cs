@@ -31,7 +31,7 @@ public class ShotShell : MonoBehaviour
         timer = timer + Time.deltaTime;
 
         //タイマーが発射間隔を超える + スペースを押す
-        if (Input.GetKeyDown(KeyCode.Space) && timer > timeBetweenShot)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && timer > timeBetweenShot)
         {
             //音を鳴らす
             AudioSource.PlayClipAtPoint(shotSound2, transform.position);

@@ -49,23 +49,19 @@ public class DestroyObject : MonoBehaviour
                 //ぶつかってきたオブジェクトを破壊
                 Destroy(other.gameObject);
 
+                //周りを吹き飛ばす
+                explosionScript.Explode();
+
                 //破壊エフェクトを発生
                 GameObject effect2 = Instantiate(effectPrefab2, transform.position, Quaternion.identity);
 
                 Destroy(effect2, 2.0f);
 
-                //周りを吹き飛ばす
-                explosionScript.Explode();
-
                 //オブジェクトを破壊する
                 Destroy(this.gameObject);
 
                 //ドロップアイテムをランダムに選択
-                int itemNum = Random.Range(0, itemPrefabs.Length + 1) - 1;
-                if(itemNum < 0)
-                {
-                    itemNum = 0;
-                }
+                int itemNum = Random.Range(1, itemPrefabs.Length) - 1;
                 GameObject dropItem = itemPrefabs[itemNum];
 
                 //アイテムドロップ

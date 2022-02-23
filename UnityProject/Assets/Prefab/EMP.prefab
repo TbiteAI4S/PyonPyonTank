@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2092108063195705373}
   - component: {fileID: 2092108063195705372}
   - component: {fileID: 2092108063195705375}
+  - component: {fileID: -8540718477410632766}
   m_Layer: 0
   m_Name: EMP
   m_TagString: Untagged
@@ -108,3 +109,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   getSound: {fileID: 8300000, guid: 0e815299a1cb72042ac2cbd7b2f174d4, type: 3}
   effectPrefab: {fileID: 100002, guid: 75369bb81385f4904842bf20a51c14a2, type: 3}
+--- !u!114 &-8540718477410632766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092108063195705374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92520ee20fed16f4c96e487ef2ca9849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 5
+  radius: 20
+  upwards: 3

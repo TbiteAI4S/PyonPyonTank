@@ -10,7 +10,14 @@ public class StopShotTime : MonoBehaviour
     public AudioClip getSound;
     //エフェクト
     public GameObject effectPrefab;
+    //吹っ飛びのスクリプトを取得
+    Explosion explosionScript;
 
+    private void Start()
+    {
+        //Exprotionのスクリプトを取得
+        explosionScript = gameObject.GetComponent<Explosion>();
+    }
     void Update()
     {
         targets = GameObject.FindGameObjectsWithTag("EnemyShotShell");
@@ -27,6 +34,9 @@ public class StopShotTime : MonoBehaviour
             }
             //音を出す
             AudioSource.PlayClipAtPoint(getSound, Camera.main.transform.position);
+
+            //周りを吹き飛ばす
+            explosionScript.Explode();
 
             //アイテムを消す
             Destroy(gameObject);

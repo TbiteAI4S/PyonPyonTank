@@ -567,6 +567,7 @@ GameObject:
   - component: {fileID: 1807586269}
   - component: {fileID: 1807586268}
   - component: {fileID: 1807586267}
+  - component: {fileID: 1807586270}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -637,7 +638,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1515592469}
+      - m_Target: {fileID: 1807586270}
         m_MethodName: OnStartButtonClicked
         m_Mode: 1
         m_Arguments:
@@ -685,6 +686,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807586265}
   m_CullTransparentMesh: 0
+--- !u!114 &1807586270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807586265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ef892dbea005249bc7c7e91c675bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1810158629
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +767,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Battle Tanks
+  m_Text: BomBom Tank
 --- !u!222 &1810158632
 CanvasRenderer:
   m_ObjectHideFlags: 0

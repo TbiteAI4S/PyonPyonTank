@@ -13,6 +13,8 @@ public class Chase : MonoBehaviour
     {
         //ナビメッシュを取得
         agent = GetComponent<NavMeshAgent>();
+        //ターゲットを取得
+        target = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()

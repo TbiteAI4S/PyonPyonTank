@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4798940410628702971}
   - component: {fileID: 4798940410628702970}
   - component: {fileID: -2382448130474092956}
-  - component: {fileID: 4798940410628702969}
   - component: {fileID: 4798940410628702968}
+  - component: {fileID: 4798940410628702969}
   - component: {fileID: 4798940410628702951}
   - component: {fileID: 5194839727321429410}
   m_Layer: 0
@@ -69,6 +69,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!195 &4798940410628702968
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4798940410628702950}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 2
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 100
+  m_StoppingDistance: 2
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &4798940410628702969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,28 +111,6 @@ MonoBehaviour:
   - {fileID: 6336938959938072112, guid: 514c9588e4b777249887d182c7b5ac0b, type: 3}
   - {fileID: 2092108063195705374, guid: 59b98f89eb8097c4b8019cab0f61f187, type: 3}
   scoreValue: 2
---- !u!195 &4798940410628702968
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4798940410628702950}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 4
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 3
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &4798940410628702951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77af2f6d2edebc84d96c73bb3f040aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 5182686607760913930, guid: aa355df1da2e8ec4f912a4a6c2b6b034, type: 3}
 --- !u!114 &5194839727321429410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,9 +136,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92520ee20fed16f4c96e487ef2ca9849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 10
+  force: 5
   radius: 10
-  upwards: 5
+  upwards: 2
 --- !u!1 &4798940410980182944
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,8 +242,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4798940411265314820}
   - component: {fileID: 4798940411265314823}
-  - component: {fileID: 4798940411265314822}
-  - component: {fileID: 4798940411265314821}
   m_Layer: 2
   m_Name: EnemyShotShell
   m_TagString: EnemyShotShell
@@ -259,7 +257,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4798940411265314819}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 1.09}
+  m_LocalPosition: {x: 0, y: 0.5, z: 1.0900002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4798940410628702971}
@@ -282,32 +280,6 @@ MonoBehaviour:
   shotSpeed: 250
   shotSound: {fileID: 8300000, guid: bdc51cf184c11d74da423b85267a14a2, type: 3}
   stopTimer: 5
---- !u!114 &4798940411265314822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4798940411265314819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0151f2568e41242498ecb74c76685e23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
---- !u!135 &4798940411265314821
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4798940411265314819}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 10
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4798940411563598602
 GameObject:
   m_ObjectHideFlags: 0

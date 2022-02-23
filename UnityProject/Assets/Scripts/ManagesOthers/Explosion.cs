@@ -29,23 +29,5 @@ public class Explosion : MonoBehaviour
                 rb.AddExplosionForce(force, position, radius, upwards, ForceMode.Impulse);
             }
         }
-        Debug.Log("起爆");
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        /*
-        //検証用
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            Explode();
-        }
-        */
     }
 }

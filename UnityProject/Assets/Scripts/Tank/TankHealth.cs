@@ -12,10 +12,14 @@ public class TankHealth : MonoBehaviour
     //HP
     public int tankHP;
     public Text HPLabel;
+    //吹っ飛びのスクリプトを取得
+    Explosion explosionScript;
 
     void Start()
     {
         HPLabel.text = "HP :" + tankHP;
+        //Exprotionのスクリプトを取得
+        explosionScript = gameObject.GetComponent<Explosion>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -26,6 +30,9 @@ public class TankHealth : MonoBehaviour
             // HPを減らす
             tankHP = tankHP - 1;
             HPLabel.text = "HP :" + tankHP;
+
+            //周りを吹き飛ばす
+            explosionScript.Explode();
 
             // 砲弾破壊
             Destroy(other.gameObject);

@@ -16,8 +16,8 @@ public class GameManage : MonoBehaviour
         //シーン切り替え後のスクリプトを取得
         var gameManager = GameObject.Find("ResultManager").GetComponent<ResultsManager>();
 
-        //スコア(倒した敵数 + 残り時間)
-        int giveScore = script.score + (int)(60f - time);
+        //スコア(倒した敵数)
+        int giveScore = script.score;
 
         //データを渡す
         gameManager.allscore = giveScore;
@@ -45,14 +45,7 @@ public class GameManage : MonoBehaviour
         time += Time.deltaTime;
         timeLabel.text = "残り時間：" + (60f - time);
 
-        //Enemyが全滅したらシーン移動
-        int count = this.transform.childCount;
-        if (count == 0)
-        {
-            SceneManager.sceneLoaded += GameSceneLoaded;
-
-            SceneManager.LoadScene("GameClear");
-        }else if(time >= 60.0f)//制限時間を超えるとシーン移動
+        if (time >= 60.0f)//制限時間を超えるとシーン移動
         {
             SceneManager.sceneLoaded += GameSceneLoaded;
 
