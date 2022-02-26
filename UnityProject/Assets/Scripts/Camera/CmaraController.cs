@@ -7,7 +7,7 @@ public class CmaraController : MonoBehaviour
     public Camera mainCamera;
     public Camera subCamera;
     public Camera backCamera;
-    //mainカメラを使うかどうか
+    //カメラを使うかどうか
     private bool mainCameraON = true;
     private bool subCameraON = false;
     //照準UI
@@ -30,8 +30,8 @@ public class CmaraController : MonoBehaviour
     void Update()
     {
         //視点がぐるぐる回転したらバックカメラにする
-        if (playerTank.transform.localEulerAngles.x > 3 || playerTank.transform.localEulerAngles.z > 3||
-            playerTank.transform.localEulerAngles.x < -3 || playerTank.transform.localEulerAngles.z < -3)
+        if (playerTank.transform.localEulerAngles.x > 5 || playerTank.transform.localEulerAngles.z > 5||
+            playerTank.transform.localEulerAngles.x < -5 || playerTank.transform.localEulerAngles.z < -5)
         {
             mainCamera.enabled = false;
             subCamera.enabled = false;

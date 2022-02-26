@@ -58,7 +58,7 @@ public class MakeEnemy : MonoBehaviour
             nowTime = 0f;
 
             //敵残存数が10以下なら
-            if(count <= 10)
+            if(count <= 7)
             {
                 AppearEnemy();
             }

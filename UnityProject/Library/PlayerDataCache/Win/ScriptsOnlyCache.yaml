@@ -5,9 +5,9 @@ ScriptsOnlyBuild:
     - BackCamera
     - BackTitle
     - Building
-    - Chase
     - CmaraController
     - DestroyObject
+    - EnemyMove
     - EnemyShotShell
     - Explosion
     - GameManage
@@ -85,13 +85,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12564}
     - Class: 114
-      Script: {instanceID: 13156}
+      Script: {instanceID: 13158}
     - Class: 114
-      Script: {instanceID: 13170}
+      Script: {instanceID: 13172}
     - Class: 114
-      Script: {instanceID: 13326}
+      Script: {instanceID: 13328}
     - Class: 114
-      Script: {instanceID: 13586}
+      Script: {instanceID: 13588}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -146,11 +146,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12564}
     - Class: 114
-      Script: {instanceID: 13156}
+      Script: {instanceID: 13158}
     - Class: 114
-      Script: {instanceID: 13170}
+      Script: {instanceID: 13172}
     - Class: 114
-      Script: {instanceID: 13586}
+      Script: {instanceID: 13588}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -205,9 +205,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12764}
     - Class: 114
-      Script: {instanceID: 13170}
+      Script: {instanceID: 13172}
     - Class: 114
-      Script: {instanceID: 13586}
+      Script: {instanceID: 13588}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -304,17 +304,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12760}
     - Class: 114
-      Script: {instanceID: 12972}
+      Script: {instanceID: 12766}
     - Class: 114
-      Script: {instanceID: 13170}
+      Script: {instanceID: 12974}
     - Class: 114
-      Script: {instanceID: 13290}
+      Script: {instanceID: 13172}
     - Class: 114
-      Script: {instanceID: 13322}
+      Script: {instanceID: 13292}
     - Class: 114
-      Script: {instanceID: 13586}
+      Script: {instanceID: 13588}
     - Class: 114
-      Script: {instanceID: 13614}
+      Script: {instanceID: 13616}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -383,11 +383,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12564}
     - Class: 114
-      Script: {instanceID: 13170}
+      Script: {instanceID: 13172}
     - Class: 114
-      Script: {instanceID: 13288}
+      Script: {instanceID: 13290}
     - Class: 114
-      Script: {instanceID: 13586}
+      Script: {instanceID: 13588}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -823,6 +823,12 @@ ScriptsOnlyBuild:
     className: TextBlinker
   - hash:
       serializedVersion: 2
+      Hash: 01082f41f366e1c857fe679d44d7ff92
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyMove
+  - hash:
+      serializedVersion: 2
       Hash: f64fd37da5cb89243ec68b5026d70bb8
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -935,12 +941,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyShotShell
-  - hash:
-      serializedVersion: 2
-      Hash: 66bca5cc6a18c5298ec75235e56a84d6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Chase
   - hash:
       serializedVersion: 2
       Hash: c724d336286af0361df899c81fd29149

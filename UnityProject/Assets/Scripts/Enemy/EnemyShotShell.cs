@@ -14,9 +14,19 @@ public class EnemyShotShell : MonoBehaviour
     private int shotIntarval;
     //射撃を止める時間
     public float stopTimer = 5.0f;
+    //敵を見つけたかどうかの判断
+    GameObject parentObject;
+    EnemyMove enemyMoveScript;
+
+    void Start()
+    {
+        parentObject = transform.parent.gameObject;
+        enemyMoveScript = parentObject.GetComponent<EnemyMove>();
+    }
 
     void Update()
     {
+        //射撃間隔
         shotIntarval = shotIntarval + 1;
 
         //射撃を止める
@@ -30,6 +40,10 @@ public class EnemyShotShell : MonoBehaviour
 
         if (shotIntarval % 300 == 0 && stopTimer <= 0)
         {
+            if (enemyMoveScript.findPlayer == false)
+            {
+                return;
+            }
             //砲弾のprefabをインスタンス化
             GameObject enemyShell = Instantiate(enemyShellPrefab, transform.position, Quaternion.identity);
 
