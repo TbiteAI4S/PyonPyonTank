@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 1037
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 43
+  controlID: 69
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 94
+  controlID: 127
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -455,9 +455,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -44.535774, y: -7.8364334, z: 30.543846}
+    m_Target: {x: -6.657877, y: -27.659912, z: 27.337173}
     speed: 2
-    m_Value: {x: -44.535774, y: -7.8364334, z: 30.543846}
+    m_Value: {x: -6.657877, y: -27.659912, z: 27.337173}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -503,13 +503,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.29933217, y: -0.3763576, z: 0.12992075, w: 0.86710924}
+    m_Target: {x: 0.3012942, y: -0.27639866, z: 0.09171738, w: 0.9079735}
     speed: 2
-    m_Value: {x: 0.30063212, y: -0.37616178, z: 0.13048498, w: 0.86665815}
+    m_Value: {x: 0.30265546, y: -0.27626044, z: 0.09213176, w: 0.9075195}
   m_Size:
-    m_Target: 79.05855
+    m_Target: 44.41561
     speed: 2
-    m_Value: 79.05855
+    m_Value: 44.41561
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -110126
+  m_LastSelectedObjectID: -4346
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -682,9 +682,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 70310000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1cf0ffff3cf0fffff0f0fffff6f0ffff06f1ffff12f1ffff24f1ffff7af1ffff64fbffff00380000
+      m_ExpandedIDs: 64fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -773,20 +773,20 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Packages
+    - Assets/Scripts/Enemy
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Packages
+  - Assets/Scripts/Enemy
   m_LastFoldersGridSize: 16
   m_LastProjectPath: U:\GitHub\PyonPyonTank\UnityProject
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ffffff7f
-    m_LastClickedID: 2147483647
-    m_ExpandedIDs: 000000003c3c00003e3c0000403c0000423c0000443c0000463c0000483c0000563c000000ca9a3b
+    m_SelectedIDs: 743c0000
+    m_LastClickedID: 15476
+    m_ExpandedIDs: 000000004c3c00004e3c0000503c0000523c0000543c0000563c0000583c00005a3c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -814,7 +814,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003c3c00003e3c0000403c0000423c0000443c0000463c0000483c0000
+    m_ExpandedIDs: 000000004c3c00004e3c0000503c0000523c0000543c0000563c0000583c00005a3c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
