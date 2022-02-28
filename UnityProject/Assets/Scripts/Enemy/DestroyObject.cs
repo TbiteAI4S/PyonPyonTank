@@ -17,6 +17,8 @@ public class DestroyObject : MonoBehaviour
     private ScoreManager sm;
     //吹っ飛びのスクリプトを取得
     Explosion explosionScript;
+    //攻撃されたかの判定
+    public bool damage = false;
 
 
     void Start()
@@ -33,6 +35,9 @@ public class DestroyObject : MonoBehaviour
         //Tag"Shell"がぶつかったとき
         if (other.CompareTag("Shell"))
         {
+            //ダメージを受けた判定
+            damage = true;
+
             //オブジェクトのHPを１ずつ減少
             objectHP -= 1;
             if (objectHP > 0)
@@ -40,7 +45,7 @@ public class DestroyObject : MonoBehaviour
                 //ぶつかってきたオブジェクトを破壊
                 Destroy(other.gameObject);
                 //エフェクトを出す
-                GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
+                GameObject effect = Instantiate(effectPrefab, this.transform.position, Quaternion.identity);
                 //エフェクトを消す
                 Destroy(effect, 2.0f);
             }
@@ -53,7 +58,7 @@ public class DestroyObject : MonoBehaviour
                 explosionScript.Explode();
 
                 //破壊エフェクトを発生
-                GameObject effect2 = Instantiate(effectPrefab2, transform.position, Quaternion.identity);
+                GameObject effect2 = Instantiate(effectPrefab2, this.transform.position, Quaternion.identity);
 
                 Destroy(effect2, 2.0f);
 
@@ -65,8 +70,8 @@ public class DestroyObject : MonoBehaviour
                 GameObject dropItem = itemPrefabs[itemNum];
 
                 //アイテムドロップ
-                Vector3 posi = transform.position;
-                Instantiate(dropItem, new Vector3(posi.x, posi.y + 0.5f, posi.z), Quaternion.identity);
+                Vector3 posi = this.transform.position;
+                Instantiate(dropItem, new Vector3(posi.x, 0.5f, posi.z), Quaternion.identity);
 
                 //スコア加算
                 sm.AddScore(scoreValue);

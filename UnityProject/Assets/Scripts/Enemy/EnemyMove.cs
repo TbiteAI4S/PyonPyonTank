@@ -18,6 +18,9 @@ public class EnemyMove : MonoBehaviour
     public bool findPlayer = false;
     //視界の範囲
     public float viewRange = 1;
+    //ダメージを受けたどうか
+    GameObject obj;
+    DestroyObject destroyObjectScript;
 
 
     //行先の決定
@@ -41,6 +44,7 @@ public class EnemyMove : MonoBehaviour
         return where;
     }
 
+    //プレイヤーを見つけたかどうか
     void FindPlayer()
     {
         //前方
@@ -96,8 +100,15 @@ public class EnemyMove : MonoBehaviour
                 return;
             }
         }
-    }
 
+        //ダメージを受けたらプレイヤーを追跡
+        if (destroyObjectScript.damage == true)
+        {
+            findPlayer = true;
+            target = targetPlayer;
+            return;
+        }
+    }
 
     void Start()
     {
@@ -109,6 +120,9 @@ public class EnemyMove : MonoBehaviour
         targetPoint2 = GameObject.Find("MovePoint2");
         targetPoint3 = GameObject.Find("MovePoint3");
 
+        //ダメージを受けたどうかのスクリプトを取得
+        destroyObjectScript = this.GetComponent<DestroyObject>();
+
         //ランダムに移動ポイントを設定
         movePoint = Random.Range(0, 2);
         target = DecidingWhereToGo(movePoint, target);
@@ -116,6 +130,13 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
+        //ナビメッシュ領域から外れた場合補正
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(transform.position, out hit, 1.0f, NavMesh.AllAreas))
+        {
+            transform.position = hit.position;
+        }
+
         //ターゲットの位置へ向かう
         agent.destination = target.transform.position;
 
@@ -131,7 +152,7 @@ public class EnemyMove : MonoBehaviour
             //ターゲットに近づくとターゲットを変更
             Vector3 nowDistance = this.transform.position - target.transform.position;
             float nowDistance2 = nowDistance.sqrMagnitude;
-            if (nowDistance2 < 3.0f)
+            if (nowDistance2 < 10.0f)
             {
                 //次のポイントを決める
                 movePoint += Random.Range(1, 2);

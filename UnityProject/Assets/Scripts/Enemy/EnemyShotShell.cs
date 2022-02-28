@@ -20,6 +20,7 @@ public class EnemyShotShell : MonoBehaviour
 
     void Start()
     {
+        //敵を見つけたかどうかの判断のスクリプト取得
         parentObject = transform.parent.gameObject;
         enemyMoveScript = parentObject.GetComponent<EnemyMove>();
     }

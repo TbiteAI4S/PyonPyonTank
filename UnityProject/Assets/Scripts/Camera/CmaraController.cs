@@ -39,6 +39,7 @@ public class CmaraController : MonoBehaviour
 
             mainCameraON = false;
             subCameraON = false;
+            aimImage.SetActive(false);
         }
         else
         {
